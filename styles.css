@@ -1,0 +1,103 @@
+/* -------- Potable.ai — Coming Soon styles -------- */
+:root{
+  --bg:#0b1220;
+  --card:#0f172a;
+  --text:#e6edf6;
+  --muted:#a9b7d0;
+  --accent:#7dd3fc;
+  --accent-strong:#38bdf8;
+  --ring: rgba(125,211,252,0.35);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background: radial-gradient(1000px 600px at 10% -10%, rgba(56,189,248,.12), transparent 60%),
+              radial-gradient(900px 500px at 110% 10%, rgba(56,189,248,.10), transparent 60%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{max-width:1050px; margin:0 auto; padding: 20px;}
+
+.nav{display:flex; align-items:center; justify-content:flex-start;}
+.brand{display:flex; gap:12px; align-items:center;}
+.logo{width:36px; height:36px; border-radius:8px}
+.name{font-weight:700; font-size:1.05rem; letter-spacing:.2px}
+
+.hero{display:grid; place-items:center; min-height:calc(100vh - 140px);}
+.hero-card{
+  width:min(880px, 100%);
+  background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0)), var(--card);
+  border:1px solid rgba(255,255,255,.06);
+  padding: clamp(20px, 4vw, 48px);
+  border-radius:28px;
+  box-shadow: var(--shadow);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-logo{
+  width:84px; height:84px; border-radius:18px; margin-bottom:10px;
+  filter: drop-shadow(0 10px 24px rgba(56,189,248,.18));
+}
+
+h1{font-size: clamp(1.8rem, 4vw, 3rem); margin:.2rem 0 .4rem}
+.highlight{color:var(--accent)}
+.tagline{color:var(--muted); margin:0 0 1rem}
+
+.vision{
+  margin: 18px auto 10px;
+  background: rgba(125,211,252,.05);
+  border:1px solid rgba(125,211,252,.12);
+  border-radius:16px;
+  padding: clamp(12px, 2.5vw, 18px);
+  text-align:left;
+}
+.vision h2{margin:.2rem 0 .4rem; font-size:1.15rem}
+.vision p{margin:.2rem 0 0; color:#d9e3f5}
+
+.coming-soon{margin-top:18px}
+.pill{
+  display:inline-block;
+  padding:8px 14px;
+  background:rgba(56,189,248,.15);
+  border:1px solid rgba(56,189,248,.35);
+  color:var(--accent-strong);
+  border-radius:999px;
+  font-weight:600;
+  letter-spacing:.25px;
+}
+.stay-tuned{margin:.6rem 0 1rem; color:var(--muted)}
+
+.notify{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
+.notify input{
+  width:min(360px, 100%);
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  outline:none;
+}
+.notify input:focus{box-shadow: 0 0 0 6px var(--ring)}
+.notify button{
+  padding:12px 16px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.1);
+  background:linear-gradient(180deg, rgba(56,189,248,.25), rgba(56,189,248,.20));
+  color:white;
+  font-weight:700;
+  letter-spacing:.3px;
+  cursor:pointer;
+}
+.notify button:hover{transform: translateY(-1px)}
+.notify small{display:block; width:100%; margin-top:8px; color:var(--accent); min-height:1em}
+
+.footer{ text-align:center; color:var(--muted); padding-bottom:30px}
+a{color:var(--accent)}
